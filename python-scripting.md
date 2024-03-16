@@ -764,3 +764,970 @@ print("b is not my_list:", is_not_same_object)
 print("3 in my_list:", element_in_list)
 print("6 not in my_list:", element_not_in_list)
 ```
+
+# Conditional Statements in Python
+
+Conditional statements are a fundamental part of programming that allow you to make decisions and execute different blocks of code based on certain conditions. In Python, you can use `if`, `elif` (short for "else if"), and `else` to create conditional statements.
+
+## `if` Statement
+
+The `if` statement is used to execute a block of code if a specified condition is `True`. If the condition is `False`, the code block is skipped.
+
+```python
+if condition:
+    # Code to execute if the condition is True
+```
+
+- Example:
+
+```python
+x = 10
+if x > 5:
+    print("x is greater than 5")
+```
+
+## `elif` Statement
+
+The `elif` statement allows you to check additional conditions if the previous `if` or `elif` conditions are `False`. You can have multiple `elif` statements after the initial `if` statement.
+
+```python
+if condition1:
+    # Code to execute if condition1 is True
+elif condition2:
+    # Code to execute if condition2 is True
+elif condition3:
+    # Code to execute if condition3 is True
+# ...
+else:
+    # Code to execute if none of the conditions are True
+```
+
+- Example:
+
+```python
+x = 10
+if x > 15:
+    print("x is greater than 15")
+elif x > 5:
+    print("x is greater than 5 but not greater than 15")
+else:
+    print("x is not greater than 5")
+```
+
+## `else` Statement
+
+The `else` statement is used to specify a block of code to execute when none of the previous conditions (in the `if` and `elif` statements) are `True`.
+
+```python
+if condition:
+    # Code to execute if the condition is True
+else:
+    # Code to execute if the condition is False
+```
+
+- Example:
+
+```python
+x = 3
+if x > 5:
+    print("x is greater than 5")
+else:
+    print("x is not greater than 5")
+```
+
+# Lists and Tuples
+
+# Understanding Lists and List Data Structure
+
+## What is a List?
+A list is a fundamental data structure in programming that allows you to store a collection of items. Lists are ordered and can contain elements of various data types, such as numbers, strings, and objects.
+
+## Creating Lists
+You can create a list in various programming languages. In Python, for example, you create a list using square brackets:
+```python
+my_list = [1, 2, 3, 'apple', 'banana']
+```
+
+## List Indexing
+List elements are indexed, starting from 0 for the first element. You can access elements by their index.
+```python
+first_element = my_list[0]  # Access the first element (1)
+```
+
+## List Length
+You can find the length of a list using the `len()` function.
+```python
+list_length = len(my_list)  # Length of the list (5)
+```
+
+# List Manipulation and Common List Operations
+
+## Appending to a List
+You can add elements to the end of a list using the `append()` method.
+```python
+my_list.append(4)  # Adds 4 to the end of the list
+```
+
+## Removing from a List
+You can remove elements by their value using the `remove()` method.
+```python
+my_list.remove('apple')  # Removes 'apple' from the list
+```
+
+## Slicing a List
+Slicing allows you to create a new list from a subset of the original list.
+```python
+subset = my_list[1:4]  # Creates a new list with elements at index 1, 2, and 3
+```
+
+## Concatenating Lists
+You can combine two or more lists to create a new list.
+```python
+new_list = my_list + [5, 6]  # Concatenates my_list with [5, 6]
+```
+
+## Sorting a List
+You can sort a list in ascending or descending order using the `sort()` method.
+```python
+my_list.sort()  # Sorts the list in ascending order
+```
+
+## Checking for an Element
+You can check if an element exists in a list using the `in` keyword.
+```python
+is_present = 'banana' in my_list  # Checks if 'banana' is in the list (True)
+```
+
+# Understanding Tuples
+
+## What is a Tuple?
+A tuple is a data structure similar to a list, but unlike lists, tuples are immutable, meaning their contents cannot be changed after creation. Tuples are typically used for grouping related data.
+
+## Creating Tuples
+You can create a tuple in various programming languages. In Python, for example, you create a tuple using parentheses:
+```python
+my_tuple = (1, 2, 'apple', 'banana')
+```
+
+## Tuple Indexing
+Tuple elements are indexed, starting from 0 for the first element. You can access elements by their index, just like lists.
+```python
+first_element = my_tuple[0]  # Access the first element (1)
+```
+
+## Tuple Length
+You can find the length of a tuple using the `len()` function.
+```python
+tuple_length = len(my_tuple)  # Length of the tuple (4)
+```
+
+# Common Tuple Operations
+
+## Accessing Tuple Elements
+Tuples are immutable, so you can only access their elements.
+```python
+second_element = my_tuple[1]  # Access the second element (2)
+```
+
+## Tuple Packing and Unpacking
+You can pack multiple values into a tuple and unpack them into separate variables.
+```python
+coordinates = (3, 4)
+x, y = coordinates  # Unpack the tuple into x and y (x=3, y=4)
+```
+
+## Concatenating Tuples
+You can concatenate two or more tuples to create a new tuple.
+```python
+new_tuple = my_tuple + (3.14, 'cherry')  # Concatenates my_tuple with a new tuple
+```
+
+## Checking for an Element
+You can check if an element exists in a tuple using the `in` keyword.
+```python
+is_present = 'apple' in my_tuple  # Checks if 'apple' is in the tuple (True)
+```
+
+## Using Tuples for Multiple Return Values
+Tuples are often used to return multiple values from a function.
+```python
+def get_coordinates():
+    return (3, 4)
+
+x, y = get_coordinates()  # Unpack the returned tuple (x=3, y=4)
+```
+
+# Differences Between Tuples and Lists
+
+Tuples and lists are both common data structures used in programming, but they have some fundamental differences that make them suitable for different purposes. Let's explore these differences:
+
+## 1. Mutability
+
+**List:** Lists are mutable, meaning their elements can be added, removed, or modified after creation. You can use methods like `append()`, `remove()`, and `pop()` to change the contents of a list.
+
+**Tuple:** Tuples are immutable, and once created, their elements cannot be changed, added, or removed. You can't use methods to modify the tuple.
+
+## 2. Syntax
+
+**List:** Lists are created using square brackets `[ ]`. Elements are separated by commas.
+
+```python
+my_list = [1, 2, 3, 'apple', 'banana']
+```
+
+**Tuple:** Tuples are created using parentheses `( )`. Elements are also separated by commas.
+
+```python
+my_tuple = (1, 2, 'apple', 'banana')
+```
+
+## 3. Performance
+
+**List:** Lists may have slightly slower performance compared to tuples because they are mutable. Modifying a list requires memory reallocation, which can be slower for large lists.
+
+**Tuple:** Tuples have better performance, especially for read-only operations, because of their immutability. They do not require memory reallocation.
+
+## 4. Use Cases
+
+**List:** Lists are used when you need a collection of elements that can change, such as a dynamic list of items or data that needs to be modified.
+
+**Tuple:** Tuples are used when you need an ordered collection of elements that should not change, such as representing a point in 2D space (x, y), or when you want to ensure the integrity of the data.
+
+## 5. Iteration
+
+**List:** You can use a for loop or other iteration methods to iterate over the elements of a list.
+
+```python
+for item in my_list:
+    # Process each item
+```
+
+**Tuple:** You can iterate over the elements of a tuple in the same way as lists using a for loop.
+
+```python
+for item in my_tuple:
+    # Process each item
+```
+
+## 6. Memory Usage
+
+**List:** Lists generally consume more memory than tuples because they need to store additional information to support their mutability.
+
+**Tuple:** Tuples consume less memory because they are immutable, and the interpreter can optimize memory usage.
+
+
+**Q1: What is a list in Python, and how is it used in DevOps?**
+
+*Answer:*
+A list in Python is a collection of ordered and mutable elements. In DevOps, lists are often used to manage and manipulate data, such as configurations, server names, and deployment targets. For example, you can use a list to store a list of servers that need to be provisioned or configured.
+
+**Q2: How do you create a list in Python, and can you provide an example related to DevOps?**
+
+*Answer:*
+In Python, you create a list using square brackets `[]`. Here's an example related to DevOps:
+
+```python
+servers = ['web-server-01', 'db-server-01', 'app-server-01']
+```
+
+This list can be used to represent a list of servers in a DevOps environment.
+
+**Q3: What is the difference between a list and a tuple in Python, and when would you choose one over the other in a DevOps context?**
+
+*Answer:*
+The key difference is mutability; lists are mutable, while tuples are immutable. In DevOps, if you need a collection of items that won't change (e.g., server configurations, deployment steps), you would use a tuple. If the data can change (e.g., a list of active servers, configuration settings that may be updated), you would use a list.
+
+**Q4: How can you access elements in a list, and provide a DevOps-related example?**
+
+*Answer:*
+You can access elements in a list by using their index. In a DevOps context, if you have a list of server names and want to access the first server, you would do the following:
+
+```python
+servers = ['web-server-01', 'db-server-01', 'app-server-01']
+first_server = servers[0]
+```
+
+**Q5: How do you add an element to the end of a list in Python? Provide a DevOps example.**
+
+*Answer:*
+You can add an element to the end of a list using the `append()` method. In DevOps, if you want to add a new server to a list of servers, you can do this:
+
+```python
+servers = ['web-server-01', 'db-server-01']
+servers.append('app-server-01')
+```
+
+Now, `servers` will contain 'app-server-01'.
+
+**Q6: How can you remove an element from a list in Python, and can you provide a DevOps use case?**
+
+*Answer:*
+You can remove an element from a list using the `remove()` method. In a DevOps use case, you might want to remove a server from a list of servers that are no longer needed:
+
+```python
+servers = ['web-server-01', 'db-server-01', 'app-server-01']
+servers.remove('db-server-01')
+```
+
+
+# Basic-Level List Questions
+
+**Q1: What is a list in Python, and how is it used in DevOps?**
+
+**Q2: How do you create a list in Python, and can you provide an example related to DevOps?**
+
+**Q3: What is the difference between a list and a tuple in Python, and when would you choose one over the other in a DevOps context?**
+
+**Q4: How can you access elements in a list, and provide a DevOps-related example?**
+
+**Q5: How do you add an element to the end of a list in Python? Provide a DevOps example.**
+
+**Q6: How can you remove an element from a list in Python, and can you provide a DevOps use case?**
+
+
+# Basic-Level List Answers
+
+**Q1: What is a list in Python, and how is it used in DevOps?**
+A list in Python is a collection of ordered and mutable elements. In DevOps, lists are often used to manage and manipulate data, such as configurations, server names, and deployment targets. For example, you can use a list to store a list of servers that need to be provisioned or configured.
+
+**Q2: How do you create a list in Python, and can you provide an example related to DevOps?**
+In Python, you create a list using square brackets `[]`. Here's an example related to DevOps:
+```python
+servers = ['web-server-01', 'db-server-01', 'app-server-01']
+```
+
+**Q3: What is the difference between a list and a tuple in Python, and when would you choose one over the other in a DevOps context?**
+The key difference is mutability; lists are mutable, while tuples are immutable. In DevOps, if you need a collection of items that won't change (e.g., server configurations, deployment steps), you would use a tuple. If the data can change (e.g., a list of active servers, configuration settings that may be updated), you would use a list.
+
+**Q4: How can you access elements in a list, and provide a DevOps-related example?**
+You can access elements in a list by using their index. In a DevOps context, if you have a list of server names and want to access the first server, you would do the following:
+```python
+servers = ['web-server-01', 'db-server-01', 'app-server-01']
+first_server = servers[0]
+```
+
+**Q5: How do you add an element to the end of a list in Python? Provide a DevOps example.**
+You can add an element to the end of a list using the `append()` method. In DevOps, if you want to add a new server to a list of servers, you can do this:
+```python
+servers = ['web-server-01', 'db-server-01']
+servers.append('app-server-01')
+```
+
+**Q6: How can you remove an element from a list in Python, and can you provide a DevOps use case?**
+You can remove an element from a list using the `remove()` method. In a DevOps use case, you might want to remove a server from a list of servers that are no longer needed:
+```python
+servers = ['web-server-01', 'db-server-01', 'app-server-01']
+servers.remove('db-server-01')
+```
+
+# Loops
+
+# Loops in Python (for and while)
+
+## Introduction
+
+Loops are a fundamental concept in programming, and they allow you to perform repetitive tasks efficiently. In Python, there are two primary types of loops: "for" and "while."
+
+## For Loop
+
+The "for" loop is used to iterate over a sequence (such as a list, tuple, string, or range) and execute a set of statements for each item in the sequence. The loop continues until all items in the sequence have been processed.
+
+**Syntax:**
+
+```python
+for variable in sequence:
+    # Code to be executed for each item in the sequence
+```
+
+**Example:**
+
+```python
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+```
+
+**Output:**
+
+```
+apple
+banana
+cherry
+```
+
+In this example, the loop iterates over the "fruits" list, and in each iteration, the "fruit" variable takes on the value of the current item in the list.
+
+#### While Loop
+
+The "while" loop continues to execute a block of code as long as a specified condition is true. It's often used when you don't know in advance how many times the loop should run.
+
+**Syntax:**
+
+```python
+while condition:
+    # Code to be executed as long as the condition is true
+```
+
+**Example:**
+
+```python
+count = 0
+while count < 5:
+    print(count)
+    count += 1
+```
+
+**Output:**
+
+```
+0
+1
+2
+3
+4
+```
+
+In this example, the "while" loop continues to execute as long as the "count" is less than 5. The "count" variable is incremented in each iteration.
+
+# Loop Control Statements (break and continue)
+
+## Introduction
+
+Loop control statements are used to modify the behavior of loops, providing greater control and flexibility during iteration. In Python, two primary loop control statements are "break" and "continue."
+
+## `break` Statement
+
+The "break" statement is used to exit the loop prematurely. It can be applied to both "for" and "while" loops, allowing you to terminate the loop when a particular condition is met.
+
+**Example:**
+
+```python
+numbers = [1, 2, 3, 4, 5]
+for number in numbers:
+    if number == 3:
+        break
+    print(number)
+```
+
+**Output:**
+
+```
+1
+2
+```
+
+In this example, the loop stops when it encounters the number 3.
+
+## `continue` Statement
+
+The "continue" statement is used to skip the current iteration of the loop and proceed to the next one. It can be used in both "for" and "while" loops, enabling you to bypass certain iterations based on a condition.
+
+**Example:**
+
+```python
+numbers = [1, 2, 3, 4, 5]
+for number in numbers:
+    if number == 3:
+        continue
+    print(number)
+```
+
+**Output:**
+
+```
+1
+2
+4
+5
+```
+
+In this example, the loop skips the iteration where the number is 3 and continues with the next iteration.
+
+## Practice Exercise - Automating Log File Analysis
+
+#### Introduction
+
+In this practice exercise, we use a "for" loop to automate the analysis of a log file and identify lines containing the word "error." This demonstrates how loops can be used to process data and extract relevant information efficiently.
+
+**Example:**
+
+```python
+log_file = [
+   "INFO: Operation successful",
+   "ERROR: File not found",
+   "DEBUG: Connection established",
+   "ERROR: Database connection failed",
+]
+
+for line in log_file:
+   if "ERROR" in line:
+       print(line)
+```
+
+**Output:**
+
+```
+ERROR: File not found
+ERROR: Database connection failed
+```
+
+In this exercise, the loop iterates through the "log_file" list and prints lines containing the word "ERROR."
+
+# For Loop DevOps use-cases
+
+1. **Server Provisioning and Configuration:**
+
+   DevOps engineers use "for" loops when provisioning multiple servers or virtual machines with the same configuration. For example, when setting up monitoring agents on multiple servers:
+
+   ```bash
+   servers=("server1" "server2" "server3")
+   for server in "${servers[@]}"; do
+       configure_monitoring_agent "$server"
+   done
+   ```
+
+2. **Deploying Configurations to Multiple Environments:**
+
+   When deploying configurations to different environments (e.g., development, staging, production), DevOps engineers can use a "for" loop to apply the same configuration changes to each environment:
+
+   ```bash
+   environments=("dev" "staging" "prod")
+   for env in "${environments[@]}"; do
+       deploy_configuration "$env"
+   done
+   ```
+
+3. **Backup and Restore Operations:**
+
+   Automating backup and restore operations is a common use case. DevOps engineers can use "for" loops to create backups for multiple databases or services and later restore them as needed.
+
+   ```bash
+   databases=("db1" "db2" "db3")
+   for db in "${databases[@]}"; do
+       create_backup "$db"
+   done
+   ```
+
+4. **Log Rotation and Cleanup:**
+
+   DevOps engineers use "for" loops to manage log files, rotate logs, and clean up older log files to save disk space.
+
+   ```bash
+   log_files=("app.log" "access.log" "error.log")
+   for log_file in "${log_files[@]}"; do
+       rotate_and_cleanup_logs "$log_file"
+   done
+   ```
+
+5. **Monitoring and Reporting:**
+
+   In scenarios where you need to gather data or perform checks on multiple systems, a "for" loop is handy. For example, monitoring server resources across multiple machines:
+
+   ```bash
+   servers=("server1" "server2" "server3")
+   for server in "${servers[@]}"; do
+       check_resource_utilization "$server"
+   done
+   ```
+
+6. **Managing Cloud Resources:**
+
+   When working with cloud infrastructure, DevOps engineers can use "for" loops to manage resources like virtual machines, databases, and storage across different cloud providers.
+
+   ```bash
+   instances=("instance1" "instance2" "instance3")
+   for instance in "${instances[@]}"; do
+       resize_instance "$instance"
+   done
+   ```
+
+   # While Loop DevOps Usecases
+
+DevOps engineers often use "while" loops in various real-time use cases to automate, monitor, and manage infrastructure and deployments. Here are some practical use cases from a DevOps engineer's perspective:
+
+1. **Continuous Integration/Continuous Deployment (CI/CD) Pipeline:**
+
+   DevOps engineers often use "while" loops in CI/CD pipelines to monitor the deployment status of applications. They can create a "while" loop that periodically checks the status of a deployment or a rolling update until it completes successfully or fails. For example, waiting for a certain number of pods to be ready in a Kubernetes deployment:
+
+   ```bash
+   while kubectl get deployment/myapp | grep -q 0/1; do
+       echo "Waiting for myapp to be ready..."
+       sleep 10
+   done
+   ```
+
+2. **Provisioning and Scaling Cloud Resources:**
+
+   When provisioning or scaling cloud resources, DevOps engineers may use "while" loops to wait for the resources to be fully provisioned and ready. For instance, waiting for an Amazon EC2 instance to become available:
+
+   ```bash
+   while ! aws ec2 describe-instance-status --instance-ids i-1234567890abcdef0 | grep -q "running"; do
+       echo "Waiting for the EC2 instance to be running..."
+       sleep 10
+   done
+   ```
+
+3. **Log Analysis and Alerting:**
+
+   DevOps engineers can use "while" loops to continuously monitor logs for specific events or errors and trigger alerts when a certain condition is met. For example, tailing a log file and alerting when an error is detected:
+
+   ```bash
+   while true; do
+       if tail -n 1 /var/log/app.log | grep -q "ERROR"; then
+           send_alert "Error detected in the log."
+       fi
+       sleep 5
+   done
+   ```
+
+4. **Database Replication and Data Synchronization:**
+
+   DevOps engineers use "while" loops to monitor database replication and ensure data consistency across multiple database instances. The loop can check for replication lag and trigger corrective actions when necessary.
+
+   ```bash
+   while true; do
+       replication_lag=$(mysql -e "SHOW SLAVE STATUS\G" | grep "Seconds_Behind_Master" | awk '{print $2}')
+       if [ "$replication_lag" -gt 60 ]; then
+           trigger_data_sync
+       fi
+       sleep 60
+   done
+   ```
+
+5. **Service Health Monitoring and Auto-Recovery:**
+
+   DevOps engineers can use "while" loops to continuously check the health of services and automatically trigger recovery actions when services become unhealthy.
+
+   ```bash
+   while true; do
+       if ! check_service_health; then
+           restart_service
+       fi
+       sleep 30
+   done
+   ```
+
+# Dictionaries and Sets
+# Dictionaries
+
+## Overview:
+A dictionary in Python is a data structure that allows you to store and retrieve values using keys. It is also known as a hashmap or associative array in other programming languages. Dictionaries are implemented as hash tables, providing fast access to values based on their keys.
+
+## Creating a Dictionary:
+```python
+my_dict = {'name': 'John', 'age': 25, 'city': 'New York'}
+```
+
+## Accessing Values:
+```python
+print(my_dict['name'])  # Output: John
+```
+
+## Modifying and Adding Elements:
+```python
+my_dict['age'] = 26  # Modifying a value
+my_dict['occupation'] = 'Engineer'  # Adding a new key-value pair
+```
+
+## Removing Elements:
+```python
+del my_dict['city']  # Removing a key-value pair
+```
+
+## Checking Key Existence:
+```python
+if 'age' in my_dict:
+    print('Age is present in the dictionary')
+```
+
+## Iterating Through Keys and Values:
+```python
+for key, value in my_dict.items():
+    print(key, value)
+```
+
+# Sets and Set Operations
+
+#### Overview:
+A set in Python is an unordered collection of unique elements. It is useful for mathematical operations like union, intersection, and difference.
+
+#### Creating a Set:
+```python
+my_set = {1, 2, 3, 4, 5}
+```
+
+#### Adding and Removing Elements:
+```python
+my_set.add(6)  # Adding an element
+my_set.remove(3)  # Removing an element
+```
+
+#### Set Operations:
+```python
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+
+union_set = set1.union(set2)  # Union of sets
+intersection_set = set1.intersection(set2)  # Intersection of sets
+difference_set = set1.difference(set2)  # Difference of sets
+```
+
+#### Subset and Superset:
+```python
+is_subset = set1.issubset(set2)  # Checking if set1 is a subset of set2
+is_superset = set1.issuperset(set2)  # Checking if set1 is a superset of set2
+```
+
+### Practice Exercises and Examples
+
+#### Example: Managing a Dictionary of Server Configurations and Optimizing Retrieval
+
+##### Scenario:
+Suppose you are managing server configurations using a dictionary.
+
+```python
+server_config = {
+    'server1': {'ip': '192.168.1.1', 'port': 8080, 'status': 'active'},
+    'server2': {'ip': '192.168.1.2', 'port': 8000, 'status': 'inactive'},
+    'server3': {'ip': '192.168.1.3', 'port': 9000, 'status': 'active'}
+}
+```
+
+##### Function for Retrieval:
+```python
+def get_server_status(server_name):
+    return server_config.get(server_name, {}).get('status', 'Server not found')
+```
+
+##### Example Usage:
+```python
+server_name = 'server2'
+status = get_server_status(server_name)
+print(f"{server_name} status: {status}")
+```
+
+# Lists vs. Sets
+
+## Lists
+
+- **Ordered Collection:**
+  - Lists are ordered collections of elements. The order in which elements are added is preserved.
+  - Elements can be accessed by their index.
+
+  ```python
+  my_list = [1, 2, 3, 4, 5]
+  print(my_list[0])  # Output: 1
+  ```
+
+- **Mutable:**
+  - Lists are mutable, meaning you can modify their elements after creation.
+
+  ```python
+  my_list[1] = 10
+  ```
+
+- **Allows Duplicate Elements:**
+  - Lists can contain duplicate elements.
+
+  ```python
+  my_list = [1, 2, 2, 3, 4]
+  ```
+
+- **Use Cases:**
+  - Use lists when you need an ordered collection with the ability to modify elements.
+
+## Sets
+
+- **Unordered Collection:**
+  - Sets are unordered collections of unique elements. The order in which elements are added is not preserved.
+  - Elements cannot be accessed by their index.
+
+  ```python
+  my_set = {1, 2, 3, 4, 5}
+  ```
+
+- **Mutable:**
+  - Sets are mutable, meaning you can add and remove elements after creation.
+
+  ```python
+  my_set.add(6)
+  ```
+
+- **No Duplicate Elements:**
+  - Sets do not allow duplicate elements. If you try to add a duplicate, it won't raise an error, but the set won't change.
+
+  ```python
+  my_set = {1, 2, 2, 3, 4}  # Results in {1, 2, 3, 4}
+  ```
+
+- **Use Cases:**
+  - Use sets when you need an unordered collection of unique elements, and you want to perform set operations like union, intersection, and difference.
+
+### Common Operations:
+
+- **Adding Elements:**
+  - Lists use `append()` or `insert()` methods.
+  - Sets use `add()` method.
+
+- **Removing Elements:**
+  - Lists use `remove()`, `pop()`, or `del` statement.
+  - Sets use `remove()` or `discard()` methods.
+
+- **Checking Membership:**
+  - Lists use the `in` operator.
+  - Sets use the `in` operator as well, which is more efficient for sets.
+
+```python
+# Lists
+if 3 in my_list:
+    print("3 is in the list")
+
+# Sets
+if 3 in my_set:
+    print("3 is in the set")
+```
+
+### Choosing Between Lists and Sets
+
+- **Use Lists When:**
+  - You need to maintain the order of elements.
+  - Duplicate elements are allowed.
+  - You need to access elements by index.
+
+- **Use Sets When:**
+  - Order doesn't matter.
+  - You want to ensure unique elements.
+  - You need to perform set operations like union, intersection, or difference.
+
+  ```python
+  # Program to demonstrate integration with GitHub to fetch the 
+# details of Users who created Pull requests(Active) on Kubernetes Github repo.
+
+import requests
+
+# URL to fetch pull requests from the GitHub API
+url = f'https://api.github.com/repos/kubernetes/kubernetes/pulls'
+
+# Make a GET request to fetch pull requests data from the GitHub API
+response = requests.get(url)  # Add headers=headers inside get() for authentication
+
+# Only if the response is successful
+if response.status_code == 200:
+    # Convert the JSON response to a dictionary
+    pull_requests = response.json()
+
+    # Create an empty dictionary to store PR creators and their counts
+    pr_creators = {}
+
+    # Iterate through each pull request and extract the creator's name
+    for pull in pull_requests:
+        creator = pull['user']['login']
+        if creator in pr_creators:
+            pr_creators[creator] += 1
+        else:
+            pr_creators[creator] = 1
+
+    # Display the dictionary of PR creators and their counts
+    print("PR Creators and Counts:")
+    for creator, count in pr_creators.items():
+        print(f"{creator}: {count} PR(s)")
+else:
+    print(f"Failed to fetch data. Status code: {response.status_code}")
+  ```
+
+# Practice Exercises and Examples
+
+## Example: Managing a Dictionary of Server Configurations and Optimizing Retrieval
+
+### Scenario:
+Suppose you are managing server configurations using a dictionary.
+
+```python
+server_config = {
+    'server1': {'ip': '192.168.1.1', 'port': 8080, 'status': 'active'},
+    'server2': {'ip': '192.168.1.2', 'port': 8000, 'status': 'inactive'},
+    'server3': {'ip': '192.168.1.3', 'port': 9000, 'status': 'active'}
+}
+```
+
+### Function for Retrieval:
+```python
+def get_server_status(server_name):
+    return server_config.get(server_name, {}).get('status', 'Server not found')
+```
+
+### Example Usage:
+```python
+server_name = 'server2'
+status = get_server_status(server_name)
+print(f"{server_name} status: {status}")
+```
+
+In this example, the function `get_server_status` optimizes the retrieval of the server status by using the `get` method and providing a default value if the server name is not found.
+
+```python
+# Server configurations dictionary
+server_config = {
+    'server1': {'ip': '192.168.1.1', 'port': 8080, 'status': 'active'},
+    'server2': {'ip': '192.168.1.2', 'port': 8000, 'status': 'inactive'},
+    'server3': {'ip': '192.168.1.3', 'port': 9000, 'status': 'active'}
+}
+
+# Retrieving information
+def get_server_status(server_name):
+    return server_config.get(server_name, {}).get('status', 'Server not found')
+
+# Example usage
+server_name = 'server2'
+status = get_server_status(server_name)
+print(f"{server_name} status: {status}")
+```
+
+```python
+# Server Configuration File
+
+# Network Settings
+PORT = 8080
+MAX_CONNECTIONS=600
+TIMEOUT = 30
+
+# Security Settings
+SSL_ENABLED = true
+SSL_CERT = /path/to/certificate.pem
+
+# Logging Settings
+LOG_LEVEL = INFO
+LOG_FILE = /var/log/server.log
+
+# Other Settings
+ENABLE_FEATURE_X = true
+```
+
+```python
+def update_server_config(file_path, key, value):
+    # Read the existing content of the server configuration file
+    with open(file_path, 'r') as file:
+        lines = file.readlines()
+
+    # Update the configuration value for the specified key
+    with open(file_path, 'w') as file:
+        for line in lines:
+            # Check if the line starts with the specified key
+            if key in line:
+                # Update the line with the new value
+                file.write(key + "=" + value + "\n")
+            else:
+                # Keep the existing line as it is
+                file.write(line)
+
+# Path to the server configuration file
+server_config_file = 'server.conf'
+
+# Key and new value for updating the server configuration
+key_to_update = 'MAX_CONNECTIONS'
+new_value = '600'  # New maximum connections allowed
+
+# Update the server configuration file
+update_server_config(server_config_file, key_to_update, new_value)
+```
+
