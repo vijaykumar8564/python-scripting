@@ -646,3 +646,121 @@ Precedence of operations in Python defines the order in which different types of
 result = 5 + 3 * 2
 # Multiplication has higher precedence, so result is 11, not 16
 ```
+
+
+
+# Python Operators Assignment
+
+In this assignment, you will explore various Python operators and their usage. Please complete the following tasks.
+
+## Task 1: Arithmetic Operators
+
+1. Create two variables `a` and `b` with numeric values.
+2. Calculate the sum, difference, product, and quotient of `a` and `b`.
+3. Print the results.
+
+```python
+a = 10
+b = 5
+
+sum_result = a + b
+difference_result = a - b
+product_result = a * b
+quotient_result = a / b
+
+print("Sum:", sum_result)
+print("Difference:", difference_result)
+print("Product:", product_result)
+print("Quotient:", quotient_result)
+```
+
+
+## Task 2: Comparison Operators
+
+1. Compare the values of `a` and `b` using the following comparison operators: `<`, `>`, `<=`, `>=`, `==`, and `!=`.
+2. Print the results of each comparison.
+
+```python
+a = 10
+b = 5
+
+less_than = a < b
+greater_than = a > b
+less_than_or_equal = a <= b
+greater_than_or_equal = a >= b
+equal = a == b
+not_equal = a != b
+
+print("a < b:", less_than)
+print("a > b:", greater_than)
+print("a <= b:", less_than_or_equal)
+print("a >= b:", greater_than_or_equal)
+print("a == b:", equal)
+print("a != b:", not_equal)
+```
+
+## Task 3: Logical Operators
+
+1. Create two boolean variables, `x` and `y`.
+2. Use logical operators (`and`, `or`, `not`) to perform various logical operations on `x` and `y`.
+3. Print the results.
+```python
+x = True
+y = False
+
+and_result = x and y
+or_result = x or y
+not_result_x = not x
+not_result_y = not y
+
+print("x and y:", and_result)
+print("x or y:", or_result)
+print("not x:", not_result_x)
+print("not y:", not_result_y)
+```
+## Task 4: Assignment Operators
+
+1. Create a variable `total` and initialize it to 10.
+2. Use assignment operators (`+=`, `-=`, `*=`, `/=`) to update the value of `total`.
+3. Print the final value of `total`.
+
+```python
+total = 10
+
+total += 5
+total -= 3
+total *= 2
+total /= 4
+
+print("Final total:", total)
+```
+
+## Task 5: Bitwise Operators (Optional)
+
+1. If you are comfortable with bitwise operators, perform some bitwise operations on integer values and print the results. If not, you can skip this task.
+
+## Task 6: Identity and Membership Operators
+
+1. Create a list `my_list` containing a few elements.
+2. Use identity operators (`is` and `is not`) to check if two variables are the same object.
+3. Use membership operators (`in` and `not in`) to check if an element is present in `my_list`.
+4. Print the results.
+```python
+my_list = [1, 2, 3, 4, 5]
+
+# Identity operators
+a = my_list
+b = [1, 2, 3, 4, 5]
+
+is_same_object = a is my_list
+is_not_same_object = b is not my_list
+
+# Membership operators
+element_in_list = 3 in my_list
+element_not_in_list = 6 not in my_list
+
+print("a is my_list:", is_same_object)
+print("b is not my_list:", is_not_same_object)
+print("3 in my_list:", element_in_list)
+print("6 not in my_list:", element_not_in_list)
+```
