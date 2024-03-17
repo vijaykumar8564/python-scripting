@@ -132,6 +132,67 @@ else:
 - Escape sequences: Special characters like newline (\n), tab (\t), and others are represented using escape sequences.
 - String methods: Python provides many built-in methods for string manipulation, such as `split()`, `join()`, and `startswith()`.
 
+* Conversion Methods:
+
+  - capitalize(): Converts the first character of the string to uppercase and the rest to lowercase.
+  - casefold(): Returns a lowercase version of the string. More aggressive than lower() in converting characters to lowercase.
+  - lower(): Converts all characters in the string to lowercase.
+  - upper(): Converts all characters in the string to uppercase.
+  - swapcase(): Swaps the case of all characters in the string (lowercase becomes uppercase and vice versa).
+  - title(): Converts the string to title case where the first character of each word is uppercase and the rest are lowercase.
+  - capitalize(): Converts the first character of the string to uppercase and the rest to lowercase.
+
+* Content Checking Methods:
+
+  - isalnum(): Returns True if all characters in the string are alphanumeric (either letters or numbers); otherwise, False.
+  - isalpha(): Returns True if all characters in the string are alphabetic; otherwise, False.
+  - isnumeric(): Returns True if all characters in the string are numeric; otherwise, False.
+  - isdigit(): Returns True if all characters in the string are digits; otherwise, False.
+  - isdecimal(): Returns True if all characters in the string are decimals; otherwise, False.
+  - isspace(): Returns True if all characters in the string are whitespace characters; otherwise, False.
+  - islower(): Returns True if all characters in the string are lowercase; otherwise, False.
+  - isupper(): Returns True if all characters in the string are uppercase; otherwise, False.
+  - istitle(): Returns True if the string is titlecased (all words in the string start with an uppercase character and the rest are         lowercase); otherwise, False.
+  - startswith(prefix[, start[, end]]): Returns True if the string starts with the specified prefix; otherwise, False.
+  - endswith(suffix[, start[, end]]): Returns True if the string ends with the specified suffix; otherwise, False.
+
+* Finding and Counting Methods:
+
+  - count(substring[, start[, end]]): Returns the number of occurrences of a substring in the string.
+  - find(substring[, start[, end]]): Returns the lowest index of a substring in the string. Returns -1 if the substring is not found.
+  - rfind(substring[, start[, end]]): Returns the highest index of a substring in the string. Returns -1 if the substring is not found.
+  - index(substring[, start[, end]]): Like find(), but raises ValueError when the substring is not found.
+  - rindex(substring[, start[, end]]): Like rfind(), but raises ValueError when the substring is not found.
+
+* Modification Methods:
+
+  - replace(old, new[, count]): Replaces occurrences of a substring with another substring. Optionally, you can specify the maximum number of replacements to make.
+  - strip([chars]): Removes leading and trailing characters (whitespace characters by default) from the string.
+  - lstrip([chars]): Removes leading characters (whitespace characters by default) from the string.
+  - rstrip([chars]): Removes trailing characters (whitespace characters by default) from the string.
+  - center(width[, fillchar]): Centers the string in a field of specified width, padding with a fill character (space by default).
+  - ljust(width[, fillchar]): Left-justifies the string in a field of specified width, padding with a fill character (space by default).
+  - rjust(width[, fillchar]): Right-justifies the string in a field of specified width, padding with a fill character (space by default).
+  - zfill(width): Pads the string with zeros on the left until it reaches the specified width.
+  - expandtabs([tabsize]): Expands tabs in the string to spaces. By default, tab size is 8 spaces.
+
+*   - Splitting and Joining Methods:
+
+  - split(sep=None, maxsplit=-1): Splits the string into a list of substrings using the specified separator. Optionally, you can specify the maximum number of splits   to make.
+  - rsplit(sep=None, maxsplit=-1): Splits the string into a list of substrings from the right using the specified separator. Optionally, you can specify the maximum number of splits to make.
+  - splitlines([keepends]): Splits the string at line breaks and returns a list of lines.
+  - join(iterable): Joins elements of an iterable (such as a list) into a single string using the string as a delimiter.
+
+* Encoding and Decoding Methods:
+
+  - encode(encoding="utf-8", errors="strict"): Encodes the string using the specified encoding.
+  - decode(encoding="utf-8", errors="strict"): Decodes the string using the specified encoding.
+* Other Methods:
+
+  - format(*args, **kwargs): Formats the string using placeholders and optional format specifiers.
+  - format_map(mapping): Similar to format(), but accepts a mapping object.
+  - maketrans(x[, y[, z]]): Creates a translation table for use in translate().
+
 # Numberic Data Type
 
 **1. Numeric Data Types in Python (int, float):**
