@@ -68,7 +68,7 @@ In programming, a data type is a classification or categorization that specifies
 - Strings are immutable, meaning you cannot change the characters within a string directly. Instead, you create new strings.
 - You can access individual characters in a string using indexing, e.g., `my_string[0]` will give you the first character.
 - Strings support various built-in methods, such as `len()`, `upper()`, `lower()`, `strip()`, `replace()`, and more, for manipulation.
-- ```python
+```python
 str1 = "Hello"
 str2 = "World"
 result = str1 + " " + str2
